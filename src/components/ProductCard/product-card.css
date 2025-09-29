@@ -1,0 +1,198 @@
+.product img {
+    width: 100%;
+    height: 200px !important;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.discount {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #0f3460;
+    padding: 3px 10px;
+    font-size: 12px;
+    border-radius: 50px;
+    color: #fff;
+    .product {
+        background: rgba(255,255,255,0.85);
+        backdrop-filter: blur(10px) saturate(160%);
+        -webkit-backdrop-filter: blur(10px) saturate(160%);
+        padding: 24px 18px 18px 18px;
+        position: relative;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.12);
+        margin: 18px 10px;
+        border: 1.5px solid rgba(95,44,130,0.08);
+        transition: box-shadow 0.3s, transform 0.3s;
+        overflow: hidden;
+    }
+    .product:hover {
+        box-shadow: 0 12px 32px 0 rgba(95,44,130,0.18), 0 2px 8px rgba(255,94,98,0.10);
+        transform: translateY(-6px) scale(1.025);
+        border-color: #ff5e62;
+    }
+    margin: 10px;
+}
+
+.product {
+    background: #fff;
+    padding: 20px;
+    position: relative;
+    .product img {
+        border-radius: 12px;
+        box-shadow: 0 2px 12px rgba(95,44,130,0.10);
+        background: linear-gradient(135deg, #ff9800 0%, #ff5e62 100%);
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .product:hover img {
+        transform: scale(1.04) rotate(-2deg);
+        box-shadow: 0 8px 24px rgba(255,94,98,0.18);
+    }
+    border-radius: 8px;
+    box-shadow: rgb(3 0 71 / 9%) 0px 1px 3px;
+    margin: 10px;
+}
+
+.product h3 {
+    margin: 10px 0;
+    font-weight: 500;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+    .discount {
+        position: absolute;
+    .price button {
+        background: linear-gradient(135deg, #ff9800 0%, #ff5e62 100%);
+        color: #fff;
+        font-size: 22px;
+        transition: 0.3s;
+        border: none;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        box-shadow: 0 2px 8px rgba(255,94,98,0.10);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .price button:hover {
+        cursor: pointer;
+        background: linear-gradient(135deg, #ff5e62 0%, #ff9800 100%);
+        color: #fff;
+        transform: scale(1.08) rotate(-8deg);
+        box-shadow: 0 4px 16px rgba(255,94,98,0.18);
+    }
+    margin: 5px 5px 5px 0;
+}
+
+.product .price {
+    .product h3 {
+        margin: 14px 0 8px 0;
+        font-weight: 700;
+        font-size: 19px;
+        cursor: pointer;
+        color: #0f3460;
+        letter-spacing: 0.5px;
+        transition: color 0.2s;
+    }
+    .product h3:hover {
+        color: #ff5e62;
+    }
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    color: black;
+}
+
+    .product .rate i {
+        font-size: 16px;
+        color: #ffcd4e;
+        margin: 5px 3px 5px 0;
+        filter: drop-shadow(0 1px 2px rgba(255,152,0,0.10));
+    }
+.price h4 {
+    margin: 20px 0 10px;
+}
+
+.price button {
+    background: none;
+    color: #0f3460;
+    .product .price {
+        color: #0f3460;
+        margin-top: 10px;
+    }
+    font-size: 20px;
+    .product-like {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 16px 16px 0 0;
+        opacity: 0;
+        transition: 0.4s;
+        z-index: 2;
+    }
+    .product-like label {
+        background: linear-gradient(90deg, #ff9800 0%, #ff5e62 100%);
+        padding: 2px 12px;
+        font-size: 13px;
+        color: white;
+        border-radius: 50px;
+        font-weight: 600;
+        box-shadow: 0 2px 8px rgba(255,94,98,0.10);
+    }
+    .product-like ion-icon {
+        font-size: 22px;
+        margin: 10px 3px;
+        cursor: pointer;
+        color: #ff5e62;
+        filter: drop-shadow(0 2px 8px rgba(255,94,98,0.10));
+        transition: color 0.2s, transform 0.2s;
+    }
+    .product-like ion-icon:hover {
+        color: #ff9800;
+        transform: scale(1.2) rotate(-10deg);
+    }
+    .product:hover .product-like {
+        opacity: 1;
+    }
+/* Modern details section */
+.product-details {
+    margin-top: 10px;
+    padding: 8px 0 0 0;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 1px 4px rgba(255,94,98,0.04);
+}
+    align-items: center;
+    font-size: 25px;
+    border-radius: 50%;
+}
+
+.product-like {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.product-like label {
+    background-color: #0f3460;
+    padding: 1px 10px;
+    font-size: 12px;
+    color: white;
+    border-radius: 50px;
+}
+
+.product-like ion-icon {
+    font-size: 20px;
+    margin: 10px 3px;
+    cursor: pointer;
+}
+
+.product:hover .product-like {
+    opacity: 1;
+}
