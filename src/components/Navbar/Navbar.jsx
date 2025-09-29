@@ -1,4 +1,5 @@
-import { useEffect, useState } from "react";
+import React from "react";
+
 import { Container, Nav, Navbar } from "react-bootstrap";
 import "./navbar.css";
 import { Link } from "react-router-dom";
