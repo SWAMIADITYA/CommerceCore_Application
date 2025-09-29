@@ -3,20 +3,29 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import "./navbar.css";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
+
 const NavBar = () => {
   const { cartList } = useSelector((state) => state.cart);
   const [expand, setExpand] = useState(false);
   const [isFixed, setIsFixed] = useState(false);
-  // fixed Header
-  function scrollHandler() {
-    if (window.scrollY >= 100) {
-      setIsFixed(true);
-    } else if (window.scrollY <= 50) {
-      setIsFixed(false);
-    }
-  }
-  window.addEventListener("scroll", scrollHandler);
-  
+
+  // fixed Header — wrapped in useEffect to avoid ESLint warning
+  useEffect(() => {
+    const scrollHandler = () => {
+      if (window.scrollY >= 100) {
+        setIsFixed(true);
+      } else if (window.scrollY <= 50) {
+        setIsFixed(false);
+      }
+    };
+
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
+
   return (
     <Navbar
       fixed="top"
@@ -28,6 +37,7 @@ const NavBar = () => {
           <ion-icon name="bag"></ion-icon>
           <h1 className="logo">CommerceCore</h1>
         </Navbar.Brand>
+
         {/* Media cart and toggle */}
         <div className="d-flex">
           <div className="media-cart">
@@ -70,6 +80,7 @@ const NavBar = () => {
             <span></span>
           </Navbar.Toggle>
         </div>
+
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="justify-content-end flex-grow-1 pe-3">
             <Nav.Item>
@@ -104,6 +115,7 @@ const NavBar = () => {
                 <span className="nav-link-label">Cart</span>
               </Link>
             </Nav.Item>
+
             <Nav.Item className="expanded-cart">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
